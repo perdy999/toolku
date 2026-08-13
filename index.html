@@ -3,842 +3,1141 @@
 <head>
 <meta name="google-site-verification" content="ggICgCXJIhURnteM7iRNpN7Rv01X0YNXORW8kBDy_9A" />
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<title>ToolKu - Tools Gratis Online</title>
 
-  <title>ToolKu - Tools Gratis Online</title>
+<meta name="description" content="ToolKu menyediakan berbagai tools online gratis seperti kalkulator, hitung umur, diskon, BMI, konversi satuan, PPN dan berbagai alat praktis lainnya.">
 
-  <meta name="description"
-        content="ToolKu menyediakan berbagai tools online gratis, cepat, praktis, dan mudah digunakan tanpa perlu instal aplikasi.">
+<meta name="keywords" content="tools online, kalkulator online, hitung umur, kalkulator diskon, kalkulator BMI, konversi satuan, tools gratis">
 
-  <meta name="keywords"
-        content="tools online gratis, kalkulator online, penghitung kata, tools gratis, ToolKu">
+<meta name="robots" content="index, follow">
 
-  <meta name="robots"
-        content="index, follow">
+<style>
 
-  <meta name="author"
-        content="ToolKu">
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
-  <link rel="canonical"
-        href="https://perdy999.github.io/toolku/">
+html{
+scroll-behavior:smooth;
+}
 
-  <meta name="theme-color"
-        content="#2563eb">
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fb;
+color:#1f2937;
+line-height:1.6;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+header{
+background:#2563eb;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,.12);
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.header{
+max-width:1100px;
+margin:auto;
+padding:15px 18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fb;
-      color: #1f2937;
-      line-height: 1.6;
-    }
+.logo{
+font-size:24px;
+font-weight:bold;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+nav{
+display:flex;
+gap:18px;
+}
 
-    /* HEADER */
-    header {
-      background: #2563eb;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-    }
+nav a{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
 
-    .nav {
-      max-width: 1100px;
-      margin: auto;
-      min-height: 68px;
-      padding: 0 20px;
+nav a:hover{
+text-decoration:underline;
+}
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
+.hero{
+background:white;
+text-align:center;
+padding:55px 18px;
+}
 
-    .logo {
-      font-size: 25px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
+.hero h1{
+font-size:36px;
+margin-bottom:12px;
+}
 
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+.hero p{
+color:#6b7280;
+max-width:650px;
+margin:auto;
+font-size:17px;
+}
 
-    .menu a {
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 15px;
-      transition: 0.2s;
-    }
+.search{
+margin-top:25px;
+width:100%;
+max-width:600px;
+padding:15px 18px;
+border:1px solid #d1d5db;
+border-radius:12px;
+font-size:16px;
+outline:none;
+}
 
-    .menu a:hover {
-      background: rgba(255,255,255,0.15);
-    }
+.search:focus{
+border-color:#2563eb;
+}
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: white;
-      text-align: center;
-      padding: 75px 20px 90px;
-    }
+.container{
+max-width:1100px;
+margin:auto;
+padding:25px 16px;
+}
 
-    .hero h1 {
-      font-size: clamp(34px, 7vw, 58px);
-      line-height: 1.15;
-      margin-bottom: 18px;
-    }
+.ad{
+background:white;
+border:1px dashed #c7c7c7;
+min-height:100px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#9ca3af;
+border-radius:12px;
+margin:20px 0;
+}
 
-    .hero p {
-      max-width: 680px;
-      margin: auto;
-      font-size: 18px;
-      opacity: 0.95;
-    }
+.section-title{
+font-size:27px;
+margin:30px 0 18px;
+}
 
-    .hero-button {
-      display: inline-block;
-      margin-top: 28px;
-      background: white;
-      color: #2563eb;
-      padding: 13px 25px;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: 0.2s;
-    }
+.tools{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:18px;
+}
 
-    .hero-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
+.card{
+background:white;
+border-radius:16px;
+padding:20px;
+box-shadow:0 4px 18px rgba(0,0,0,.06);
+}
 
-    /* CONTAINER */
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 55px 20px;
-    }
+.card h3{
+font-size:19px;
+margin-bottom:7px;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 35px;
-    }
+.card p{
+font-size:14px;
+color:#6b7280;
+margin-bottom:15px;
+}
 
-    .section-title h2 {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
+input,
+select{
+width:100%;
+padding:12px;
+border:1px solid #d1d5db;
+border-radius:9px;
+font-size:15px;
+margin:5px 0;
+background:white;
+}
 
-    .section-title p {
-      color: #6b7280;
-    }
+button{
+border:0;
+background:#2563eb;
+color:white;
+padding:11px 16px;
+border-radius:9px;
+font-size:14px;
+cursor:pointer;
+margin-top:6px;
+}
 
-    /* TOOLS */
-    .tools {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+button:hover{
+background:#1d4ed8;
+}
 
-    .tool-card {
-      background: white;
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-      border: 1px solid #e5e7eb;
-      transition: 0.25s;
-    }
+.result{
+background:#eff6ff;
+padding:12px;
+border-radius:9px;
+margin-top:10px;
+font-weight:bold;
+min-height:20px;
+}
 
-    .tool-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.1);
-    }
+.info{
+background:white;
+padding:25px;
+border-radius:15px;
+margin-top:25px;
+box-shadow:0 4px 18px rgba(0,0,0,.05);
+}
 
-    .tool-icon {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
+.info h2{
+margin-bottom:15px;
+}
 
-    .tool-card h3 {
-      font-size: 21px;
-      margin-bottom: 8px;
-    }
+.info p{
+margin-bottom:13px;
+color:#4b5563;
+}
 
-    .tool-card p {
-      color: #6b7280;
-      margin-bottom: 20px;
-    }
+.hidden{
+display:none;
+}
 
-    .tool-button {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+footer{
+background:#111827;
+color:white;
+margin-top:45px;
+padding:35px 18px;
+text-align:center;
+}
 
-    .tool-button:hover {
-      background: #1d4ed8;
-    }
+footer a{
+color:#93c5fd;
+text-decoration:none;
+margin:0 7px;
+}
 
-    /* FEATURES */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 45px;
-    }
+footer p{
+margin:8px;
+font-size:14px;
+}
 
-    .feature {
-      background: white;
-      padding: 25px;
-      border-radius: 14px;
-      text-align: center;
-      border: 1px solid #e5e7eb;
-    }
+.stopwatch{
+font-size:30px;
+font-weight:bold;
+text-align:center;
+padding:10px;
+}
 
-    .feature-icon {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+.small-note{
+font-size:12px;
+color:#6b7280;
+margin-top:7px;
+}
 
-    .feature h3 {
-      margin-bottom: 7px;
-    }
+@media(max-width:700px){
 
-    .feature p {
-      color: #6b7280;
-      font-size: 14px;
-    }
+.header{
+flex-direction:column;
+gap:12px;
+}
 
-    /* ABOUT */
-    .about {
-      background: white;
-      border-radius: 18px;
-      padding: 35px;
-      margin-top: 50px;
-      border: 1px solid #e5e7eb;
-    }
+nav{
+gap:12px;
+flex-wrap:wrap;
+justify-content:center;
+}
 
-    .about h2 {
-      margin-bottom: 15px;
-    }
+.hero h1{
+font-size:29px;
+}
 
-    .about p {
-      color: #4b5563;
-      margin-bottom: 12px;
-    }
+.hero{
+padding:40px 15px;
+}
 
-    /* FOOTER */
-    footer {
-      background: #111827;
-      color: #d1d5db;
-      margin-top: 30px;
-    }
+.tools{
+grid-template-columns:1fr;
+}
 
-    .footer-inner {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px 25px;
-    }
+}
 
-    .footer-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-
-    .footer-brand h2 {
-      color: white;
-      margin-bottom: 8px;
-    }
-
-    .footer-brand p {
-      max-width: 400px;
-      color: #9ca3af;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .footer-links a {
-      color: #d1d5db;
-    }
-
-    .footer-links a:hover {
-      color: white;
-      text-decoration: underline;
-    }
-
-    .copyright {
-      border-top: 1px solid #374151;
-      padding-top: 20px;
-      text-align: center;
-      color: #9ca3af;
-      font-size: 14px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 800px) {
-      .nav {
-        flex-direction: column;
-        padding: 15px 12px;
-      }
-
-      .menu {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .menu a {
-        font-size: 14px;
-        padding: 7px 9px;
-      }
-
-      .hero {
-        padding: 55px 18px 65px;
-      }
-
-      .tools,
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .container {
-        padding: 40px 15px;
-      }
-
-      .about {
-        padding: 25px;
-      }
-
-      .footer-top {
-        flex-direction: column;
-      }
-
-      .footer-links {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav class="nav">
+<header>
 
-      <a href="index.html" class="logo">
-        🛠️ ToolKu
-      </a>
+<div class="header">
 
-      <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="#tools">Tools</a>
-        <a href="privacy.html">Privasi</a>
-        <a href="terms.html">Ketentuan</a>
-        <a href="contact.html">Kontak</a>
-      </div>
+<div class="logo">
+ToolKu
+</div>
 
-    </nav>
-  </header>
+<nav>
+<a href="#home">Home</a>
+<a href="#tools">Tools</a>
+<a href="#tentang">Tentang</a>
+<a href="#privacy">Privasi</a>
+<a href="#kontak">Kontak</a>
+</nav>
 
+</div>
 
-  <!-- HERO -->
-  <section class="hero">
+</header>
 
-    <h1>ToolKu</h1>
 
-    <p>
-      Kumpulan tools online gratis yang cepat,
-      praktis, sederhana, dan mudah digunakan
-      langsung dari browser.
-    </p>
+<!-- HOME -->
 
-    <a href="#tools" class="hero-button">
-      🚀 Lihat Tools
-    </a>
+<section class="hero" id="home">
 
-  </section>
+<h1>Tools Gratis Online</h1>
 
+<p>
+Berbagai tools praktis yang bisa digunakan gratis langsung dari HP maupun komputer.
+</p>
 
-  <!-- TOOLS -->
-  <main>
+<input
+class="search"
+id="search"
+type="text"
+placeholder="🔍 Cari tools..."
+onkeyup="cariTools()">
 
-    <section id="tools" class="container">
+</section>
 
-      <div class="section-title">
-        <h2>🧰 Tools Gratis</h2>
-        <p>
-          Pilih tools yang ingin kamu gunakan.
-        </p>
-      </div>
 
+<div class="container">
 
-      <div class="tools">
 
-        <!-- TOOL 1 -->
-        <div class="tool-card">
+<!-- IKLAN -->
 
-          <div class="tool-icon">🧮</div>
+<div class="ad">
+Ruang Iklan
+</div>
 
-          <h3>Kalkulator</h3>
 
-          <p>
-            Hitung angka dengan cepat dan mudah
-            langsung dari browser.
-          </p>
+<!-- TOOLS -->
 
-          <a href="#calculator" class="tool-button">
-            Buka Tool
-          </a>
+<h2 class="section-title" id="tools">
+Tools Gratis
+</h2>
 
-        </div>
+<div class="tools" id="toolList">
 
 
-        <!-- TOOL 2 -->
-        <div class="tool-card">
+<!-- 1 KALKULATOR -->
 
-          <div class="tool-icon">📝</div>
+<div class="card tool">
 
-          <h3>Penghitung Kata</h3>
+<h3>🧮 Kalkulator</h3>
 
-          <p>
-            Hitung jumlah kata dan karakter
-            dalam teks secara cepat.
-          </p>
+<p>Hitung penjumlahan, pengurangan, perkalian dan pembagian.</p>
 
-          <a href="#word-counter" class="tool-button">
-            Buka Tool
-          </a>
+<input id="calcA" type="number" placeholder="Angka pertama">
 
-        </div>
+<select id="operator">
+<option value="+">Penjumlahan (+)</option>
+<option value="-">Pengurangan (-)</option>
+<option value="*">Perkalian (×)</option>
+<option value="/">Pembagian (÷)</option>
+</select>
 
+<input id="calcB" type="number" placeholder="Angka kedua">
 
-        <!-- TOOL 3 -->
-        <div class="tool-card">
+<button onclick="kalkulator()">Hitung</button>
 
-          <div class="tool-icon">🔤</div>
+<div class="result" id="calcResult"></div>
 
-          <h3>Case Converter</h3>
+</div>
 
-          <p>
-            Ubah teks menjadi huruf besar,
-            kecil, atau format judul.
-          </p>
-
-          <a href="#case-converter" class="tool-button">
-            Buka Tool
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- CALCULATOR -->
-      <div id="calculator" class="about">
-
-        <h2>🧮 Kalkulator Sederhana</h2>
-
-        <p>
-          Masukkan perhitungan matematika sederhana.
-        </p>
-
-        <input
-          id="calcInput"
-          type="text"
-          placeholder="Contoh: 100 + 25 * 2"
-          style="
-            width:100%;
-            padding:14px;
-            margin-top:15px;
-            border:1px solid #d1d5db;
-            border-radius:9px;
-            font-size:16px;
-          "
-        >
-
-        <button
-          onclick="calculate()"
-          style="
-            margin-top:12px;
-            padding:12px 20px;
-            border:0;
-            border-radius:8px;
-            background:#2563eb;
-            color:white;
-            font-weight:bold;
-            cursor:pointer;
-          "
-        >
-          Hitung
-        </button>
-
-        <div
-          id="calcResult"
-          style="
-            margin-top:15px;
-            font-weight:bold;
-          "
-        ></div>
-
-      </div>
-
-
-      <!-- WORD COUNTER -->
-      <div id="word-counter" class="about">
-
-        <h2>📝 Penghitung Kata</h2>
-
-        <p>
-          Masukkan teks untuk menghitung kata dan karakter.
-        </p>
-
-        <textarea
-          id="wordText"
-          oninput="countWords()"
-          placeholder="Tulis atau tempel teks di sini..."
-          style="
-            width:100%;
-            min-height:150px;
-            margin-top:15px;
-            padding:14px;
-            border:1px solid #d1d5db;
-            border-radius:9px;
-            resize:vertical;
-            font-size:16px;
-          "
-        ></textarea>
-
-        <p id="wordResult" style="margin-top:12px;">
-          Kata: 0 | Karakter: 0
-        </p>
-
-      </div>
-
-
-      <!-- CASE CONVERTER -->
-      <div id="case-converter" class="about">
-
-        <h2>🔤 Case Converter</h2>
-
-        <p>
-          Ubah teks menjadi huruf besar, kecil,
-          atau Title Case.
-        </p>
-
-        <textarea
-          id="caseText"
-          placeholder="Masukkan teks..."
-          style="
-            width:100%;
-            min-height:130px;
-            margin-top:15px;
-            padding:14px;
-            border:1px solid #d1d5db;
-            border-radius:9px;
-            resize:vertical;
-            font-size:16px;
-          "
-        ></textarea>
-
-        <div style="
-          display:flex;
-          flex-wrap:wrap;
-          gap:8px;
-          margin-top:12px;
-        ">
-
-          <button onclick="upperCase()"
-            style="padding:10px 15px;border:0;border-radius:8px;background:#2563eb;color:white;">
-            UPPERCASE
-          </button>
-
-          <button onclick="lowerCase()"
-            style="padding:10px 15px;border:0;border-radius:8px;background:#2563eb;color:white;">
-            lowercase
-          </button>
-
-          <button onclick="titleCase()"
-            style="padding:10px 15px;border:0;border-radius:8px;background:#2563eb;color:white;">
-            Title Case
-          </button>
-
-        </div>
-
-      </div>
-
-
-      <!-- FEATURES -->
-      <div class="features">
 
-        <div class="feature">
-          <div class="feature-icon">⚡</div>
-          <h3>Cepat</h3>
-          <p>
-            Tools berjalan langsung di browser.
-          </p>
-        </div>
+<!-- 2 PERSENTASE -->
 
-        <div class="feature">
-          <div class="feature-icon">🆓</div>
-          <h3>Gratis</h3>
-          <p>
-            Gunakan berbagai tools tanpa biaya.
-          </p>
-        </div>
+<div class="card tool">
 
-        <div class="feature">
-          <div class="feature-icon">📱</div>
-          <h3>Mobile Friendly</h3>
-          <p>
-            Nyaman digunakan dari HP maupun komputer.
-          </p>
-        </div>
+<h3>📊 Kalkulator Persentase</h3>
 
-      </div>
+<p>Hitung persentase dari suatu angka.</p>
 
+<input id="nilaiPersen" type="number" placeholder="Nilai">
 
-      <!-- ABOUT -->
-      <div class="about">
+<input id="angkaPersen" type="number" placeholder="Persentase (%)">
 
-        <h2>📌 Tentang ToolKu</h2>
+<button onclick="persentase()">Hitung</button>
 
-        <p>
-          ToolKu adalah website yang menyediakan
-          berbagai tools online sederhana dan gratis
-          untuk membantu pekerjaan sehari-hari.
-        </p>
+<div class="result" id="persenResult"></div>
 
-        <p>
-          Kami terus mengembangkan ToolKu agar
-          semakin banyak tools yang bermanfaat,
-          mudah digunakan, dan dapat diakses
-          dari berbagai perangkat.
-        </p>
+</div>
 
-      </div>
 
-    </section>
+<!-- 3 DISKON -->
 
-  </main>
+<div class="card tool">
 
+<h3>🏷️ Kalkulator Diskon</h3>
 
-  <!-- FOOTER -->
-  <footer>
+<p>Hitung harga setelah mendapatkan diskon.</p>
 
-    <div class="footer-inner">
+<input id="harga" type="number" placeholder="Harga awal">
 
-      <div class="footer-top">
+<input id="diskon" type="number" placeholder="Diskon (%)">
 
-        <div class="footer-brand">
+<button onclick="hitungDiskon()">Hitung</button>
 
-          <h2>🛠️ ToolKu</h2>
+<div class="result" id="diskonResult"></div>
 
-          <p>
-            Tools online gratis, cepat,
-            praktis, dan mudah digunakan.
-          </p>
+</div>
 
-        </div>
 
+<!-- 4 PPN -->
 
-        <div class="footer-links">
+<div class="card tool">
 
-          <a href="index.html">
-            Home
-          </a>
+<h3>🧾 Kalkulator PPN</h3>
 
-          <a href="#tools">
-            Tools
-          </a>
+<p>Hitung nilai PPN dan total harga.</p>
 
-          <a href="privacy.html">
-            Privasi
-          </a>
+<input id="hargaPPN" type="number" placeholder="Harga sebelum PPN">
 
-          <a href="terms.html">
-            Syarat & Ketentuan
-          </a>
+<input id="ratePPN" type="number" value="11" placeholder="PPN (%)">
 
-          <a href="contact.html">
-            Kontak
-          </a>
+<button onclick="hitungPPN()">Hitung</button>
 
-        </div>
+<div class="result" id="ppnResult"></div>
 
-      </div>
+</div>
 
 
-      <div class="copyright">
+<!-- 5 UMUR -->
 
-        © <span id="year"></span> ToolKu.
-        Semua hak dilindungi.
+<div class="card tool">
 
-      </div>
+<h3>🎂 Hitung Umur</h3>
 
-    </div>
+<p>Hitung usia berdasarkan tanggal lahir.</p>
 
-  </footer>
+<input id="lahir" type="date">
 
+<button onclick="hitungUmur()">Hitung</button>
 
-  <!-- JAVASCRIPT -->
-  <script>
+<div class="result" id="umurResult"></div>
 
-    /* Tahun otomatis */
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+</div>
 
 
-    /* Kalkulator */
-    function calculate() {
+<!-- 6 BMI -->
 
-      const input =
-        document.getElementById("calcInput").value;
+<div class="card tool">
 
-      const result =
-        document.getElementById("calcResult");
+<h3>❤️ Kalkulator BMI</h3>
 
-      if (!input.trim()) {
+<p>Hitung indeks massa tubuh berdasarkan berat dan tinggi.</p>
 
-        result.textContent =
-          "Masukkan perhitungan terlebih dahulu.";
+<input id="berat" type="number" placeholder="Berat (kg)">
 
-        return;
-      }
+<input id="tinggi" type="number" placeholder="Tinggi (cm)">
 
-      try {
+<button onclick="hitungBMI()">Hitung</button>
 
-        /*
-         * Kalkulator sederhana.
-         * Hanya digunakan untuk ekspresi matematika.
-         */
-        const value = Function(
-          '"use strict"; return (' + input + ')'
-        )();
+<div class="result" id="bmiResult"></div>
 
-        if (
-          typeof value !== "number" ||
-          !Number.isFinite(value)
-        ) {
+<p class="small-note">
+Hasil BMI hanya informasi umum dan bukan diagnosis medis.
+</p>
 
-          throw new Error();
+</div>
 
-        }
 
-        result.textContent =
-          "Hasil: " + value;
+<!-- 7 METER KM -->
 
-      } catch (error) {
+<div class="card tool">
 
-        result.textContent =
-          "Perhitungan tidak valid.";
+<h3>📏 Meter → Kilometer</h3>
 
-      }
+<p>Konversi meter menjadi kilometer.</p>
 
-    }
+<input id="meter" type="number" placeholder="Meter">
 
+<button onclick="meterKM()">Konversi</button>
 
-    /* Penghitung kata */
-    function countWords() {
+<div class="result" id="meterResult"></div>
 
-      const text =
-        document.getElementById("wordText").value;
+</div>
 
-      const result =
-        document.getElementById("wordResult");
 
-      const trimmed =
-        text.trim();
+<!-- 8 KM METER -->
 
-      const words =
-        trimmed
-          ? trimmed.split(/\s+/).length
-          : 0;
+<div class="card tool">
 
-      const characters =
-        text.length;
+<h3>📐 Kilometer → Meter</h3>
 
-      result.textContent =
-        "Kata: " + words +
-        " | Karakter: " + characters;
+<p>Konversi kilometer menjadi meter.</p>
 
-    }
+<input id="km" type="number" placeholder="Kilometer">
 
+<button onclick="kmMeter()">Konversi</button>
 
-    /* Uppercase */
-    function upperCase() {
+<div class="result" id="kmResult"></div>
 
-      const text =
-        document.getElementById("caseText");
+</div>
 
-      text.value =
-        text.value.toUpperCase();
 
-    }
+<!-- 9 KG GRAM -->
 
+<div class="card tool">
 
-    /* Lowercase */
-    function lowerCase() {
+<h3>⚖️ Kg → Gram</h3>
 
-      const text =
-        document.getElementById("caseText");
+<p>Konversi kilogram menjadi gram.</p>
 
-      text.value =
-        text.value.toLowerCase();
+<input id="kg" type="number" placeholder="Kilogram">
 
-    }
+<button onclick="kgGram()">Konversi</button>
 
+<div class="result" id="kgResult"></div>
 
-    /* Title Case */
-    function titleCase() {
+</div>
 
-      const text =
-        document.getElementById("caseText");
 
-      text.value =
-        text.value
-          .toLowerCase()
-          .replace(
-            /\b\w/g,
-            function(char) {
-              return char.toUpperCase();
-            }
-          );
+<!-- 10 CELSIUS -->
 
-    }
+<div class="card tool">
 
-  </script>
+<h3>🌡️ Celsius → Fahrenheit</h3>
+
+<p>Konversi suhu Celsius menjadi Fahrenheit.</p>
+
+<input id="celcius" type="number" placeholder="Celsius">
+
+<button onclick="celsiusF()">Konversi</button>
+
+<div class="result" id="suhuResult"></div>
+
+</div>
+
+
+<!-- 11 FAHRENHEIT -->
+
+<div class="card tool">
+
+<h3>🌡️ Fahrenheit → Celsius</h3>
+
+<p>Konversi Fahrenheit menjadi Celsius.</p>
+
+<input id="fahrenheit" type="number" placeholder="Fahrenheit">
+
+<button onclick="fahrenheitC()">Konversi</button>
+
+<div class="result" id="fResult"></div>
+
+</div>
+
+
+<!-- 12 BUNGA -->
+
+<div class="card tool">
+
+<h3>💰 Bunga Sederhana</h3>
+
+<p>Hitung bunga sederhana berdasarkan modal dan waktu.</p>
+
+<input id="modal" type="number" placeholder="Modal">
+
+<input id="bunga" type="number" placeholder="Bunga per tahun (%)">
+
+<input id="tahun" type="number" placeholder="Jumlah tahun">
+
+<button onclick="hitungBunga()">Hitung</button>
+
+<div class="result" id="bungaResult"></div>
+
+</div>
+
+
+<!-- 13 SELISIH TANGGAL -->
+
+<div class="card tool">
+
+<h3>📅 Selisih Tanggal</h3>
+
+<p>Hitung jumlah hari antara dua tanggal.</p>
+
+<input id="tanggal1" type="date">
+
+<input id="tanggal2" type="date">
+
+<button onclick="selisihTanggal()">Hitung</button>
+
+<div class="result" id="tanggalResult"></div>
+
+</div>
+
+
+<!-- 14 ANGKA ACAK -->
+
+<div class="card tool">
+
+<h3>🎲 Angka Acak</h3>
+
+<p>Generate angka acak berdasarkan batas minimum dan maksimum.</p>
+
+<input id="minRandom" type="number" placeholder="Minimum">
+
+<input id="maxRandom" type="number" placeholder="Maksimum">
+
+<button onclick="angkaAcak()">Generate</button>
+
+<div class="result" id="randomResult"></div>
+
+</div>
+
+
+<!-- 15 STOPWATCH -->
+
+<div class="card tool">
+
+<h3>⏱️ Stopwatch</h3>
+
+<p>Gunakan stopwatch sederhana.</p>
+
+<div class="stopwatch" id="stopwatch">
+00:00:00
+</div>
+
+<button onclick="mulaiStopwatch()">Mulai</button>
+<button onclick="pauseStopwatch()">Pause</button>
+<button onclick="resetStopwatch()">Reset</button>
+
+</div>
+
+
+</div>
+
+
+<!-- IKLAN -->
+
+<div class="ad">
+Ruang Iklan
+</div>
+
+
+<!-- TENTANG -->
+
+<section class="info" id="tentang">
+
+<h2>ℹ️ Tentang ToolKu</h2>
+
+<p>
+ToolKu adalah website yang menyediakan berbagai tools online sederhana dan praktis yang dapat digunakan secara gratis.
+</p>
+
+<p>
+Kami membuat ToolKu untuk membantu pengguna melakukan perhitungan, konversi dan berbagai pekerjaan sederhana langsung melalui browser.
+</p>
+
+<p>
+Website ini dapat digunakan melalui smartphone, tablet maupun komputer tanpa perlu memasang aplikasi tambahan.
+</p>
+
+</section>
+
+
+<!-- PRIVACY -->
+
+<section class="info" id="privacy">
+
+<h2>🔐 Kebijakan Privasi</h2>
+
+<p>
+ToolKu menghargai privasi pengunjung website.
+</p>
+
+<p>
+Sebagian besar tools di website ini memproses data langsung di perangkat pengguna melalui browser. Kami tidak memerlukan pengguna untuk membuat akun untuk menggunakan tools dasar.
+</p>
+
+<p>
+ToolKu dapat menggunakan layanan pihak ketiga seperti Google AdSense untuk menampilkan iklan. Layanan tersebut dapat menggunakan teknologi seperti cookie sesuai dengan kebijakan dan ketentuan mereka.
+</p>
+
+<p>
+Pengguna dapat mengatur atau menonaktifkan cookie melalui pengaturan browser masing-masing.
+</p>
+
+<p>
+Dengan menggunakan website ini, pengguna menyetujui kebijakan privasi yang berlaku.
+</p>
+
+</section>
+
+
+<!-- TERMS -->
+
+<section class="info" id="terms">
+
+<h2>📜 Syarat dan Ketentuan</h2>
+
+<p>
+ToolKu menyediakan tools untuk tujuan informasi dan penggunaan umum.
+</p>
+
+<p>
+Kami berusaha menjaga hasil perhitungan tetap akurat, tetapi kami tidak menjamin bahwa semua hasil selalu bebas dari kesalahan.
+</p>
+
+<p>
+Pengguna bertanggung jawab atas keputusan yang dibuat berdasarkan hasil dari tools di website ini.
+</p>
+
+<p>
+ToolKu dapat melakukan perubahan, penambahan atau penghapusan fitur sewaktu-waktu.
+</p>
+
+</section>
+
+
+<!-- KONTAK -->
+
+<section class="info" id="kontak">
+
+<h2>📧 Kontak</h2>
+
+<p>
+Jika Anda menemukan kesalahan, memiliki pertanyaan atau ingin memberikan saran mengenai website ToolKu, silakan hubungi kami.
+</p>
+
+<p>
+Email:
+<strong>admin@toolku.com</strong>
+</p>
+
+<p>
+Catatan: ganti alamat email di atas dengan email kamu sendiri sebelum website dipublikasikan secara serius.
+</p>
+
+</section>
+
+
+</div>
+
+
+<footer>
+
+<p>
+© 2026 ToolKu - Tools Gratis Online
+</p>
+
+<p>
+<a href="#home">Home</a>
+<a href="#tools">Tools</a>
+<a href="#tentang">Tentang</a>
+<a href="#privacy">Privasi</a>
+<a href="#terms">Syarat</a>
+<a href="#kontak">Kontak</a>
+</p>
+
+</footer>
+
+
+<script>
+
+/* KALKULATOR */
+
+function kalkulator(){
+
+let a=parseFloat(document.getElementById("calcA").value);
+let b=parseFloat(document.getElementById("calcB").value);
+let op=document.getElementById("operator").value;
+
+if(isNaN(a)||isNaN(b)){
+document.getElementById("calcResult").innerText="Masukkan kedua angka.";
+return;
+}
+
+let hasil;
+
+if(op==="+") hasil=a+b;
+if(op==="-") hasil=a-b;
+if(op==="*") hasil=a*b;
+
+if(op==="/"){
+if(b===0){
+document.getElementById("calcResult").innerText="Tidak bisa dibagi dengan nol.";
+return;
+}
+hasil=a/b;
+}
+
+document.getElementById("calcResult").innerText="Hasil: "+hasil;
+
+}
+
+
+/* PERSENTASE */
+
+function persentase(){
+
+let nilai=parseFloat(document.getElementById("nilaiPersen").value);
+let persen=parseFloat(document.getElementById("angkaPersen").value);
+
+if(isNaN(nilai)||isNaN(persen)){
+document.getElementById("persenResult").innerText="Masukkan nilai.";
+return;
+}
+
+let hasil=nilai*persen/100;
+
+document.getElementById("persenResult").innerText=
+persen+"% dari "+nilai+" = "+hasil;
+
+}
+
+
+/* DISKON */
+
+function hitungDiskon(){
+
+let harga=parseFloat(document.getElementById("harga").value);
+let diskon=parseFloat(document.getElementById("diskon").value);
+
+if(isNaN(harga)||isNaN(diskon)){
+document.getElementById("diskonResult").innerText="Masukkan harga dan diskon.";
+return;
+}
+
+let potongan=harga*diskon/100;
+let akhir=harga-potongan;
+
+document.getElementById("diskonResult").innerText=
+"Potongan: Rp "+potongan.toLocaleString("id-ID")+
+" | Harga akhir: Rp "+akhir.toLocaleString("id-ID");
+
+}
+
+
+/* PPN */
+
+function hitungPPN(){
+
+let harga=parseFloat(document.getElementById("hargaPPN").value);
+let rate=parseFloat(document.getElementById("ratePPN").value);
+
+if(isNaN(harga)||isNaN(rate)){
+document.getElementById("ppnResult").innerText="Masukkan data.";
+return;
+}
+
+let ppn=harga*rate/100;
+let total=harga+ppn;
+
+document.getElementById("ppnResult").innerText=
+"PPN: Rp "+ppn.toLocaleString("id-ID")+
+" | Total: Rp "+total.toLocaleString("id-ID");
+
+}
+
+
+/* UMUR */
+
+function hitungUmur(){
+
+let input=document.getElementById("lahir").value;
+
+if(!input){
+document.getElementById("umurResult").innerText="Pilih tanggal lahir.";
+return;
+}
+
+let lahir=new Date(input);
+let sekarang=new Date();
+
+let umur=sekarang.getFullYear()-lahir.getFullYear();
+
+let bulan=sekarang.getMonth()-lahir.getMonth();
+
+if(
+bulan<0 ||
+(bulan===0 && sekarang.getDate()<lahir.getDate())
+){
+umur--;
+}
+
+document.getElementById("umurResult").innerText=
+"Umur: "+umur+" tahun";
+
+}
+
+
+/* BMI */
+
+function hitungBMI(){
+
+let berat=parseFloat(document.getElementById("berat").value);
+let tinggi=parseFloat(document.getElementById("tinggi").value);
+
+if(isNaN(berat)||isNaN(tinggi)||tinggi<=0){
+document.getElementById("bmiResult").innerText="Masukkan berat dan tinggi.";
+return;
+}
+
+let meter=tinggi/100;
+let bmi=berat/(meter*meter);
+
+let kategori="";
+
+if(bmi<18.5) kategori="di bawah kisaran umum";
+else if(bmi<25) kategori="kisaran umum";
+else if(bmi<30) kategori="di atas kisaran umum";
+else kategori="obesitas";
+
+document.getElementById("bmiResult").innerText=
+"BMI: "+bmi.toFixed(1)+" ("+kategori+")";
+
+}
+
+
+/* METER KM */
+
+function meterKM(){
+
+let meter=parseFloat(document.getElementById("meter").value);
+
+if(isNaN(meter)){
+document.getElementById("meterResult").innerText="Masukkan meter.";
+return;
+}
+
+document.getElementById("meterResult").innerText=
+meter+" meter = "+(meter/1000)+" km";
+
+}
+
+
+/* KM METER */
+
+function kmMeter(){
+
+let km=parseFloat(document.getElementById("km").value);
+
+if(isNaN(km)){
+document.getElementById("kmResult").innerText="Masukkan kilometer.";
+return;
+}
+
+document.getElementById("kmResult").innerText=
+km+" km = "+(km*1000)+" meter";
+
+}
+
+
+/* KG GRAM */
+
+function kgGram(){
+
+let kg=parseFloat(document.getElementById("kg").value);
+
+if(isNaN(kg)){
+document.getElementById("kgResult").innerText="Masukkan kilogram.";
+return;
+}
+
+document.getElementById("kgResult").innerText=
+kg+" kg = "+(kg*1000)+" gram";
+
+}
+
+
+/* CELSIUS */
+
+function celsiusF(){
+
+let c=parseFloat(document.getElementById("celcius").value);
+
+if(isNaN(c)){
+document.getElementById("suhuResult").innerText="Masukkan suhu.";
+return;
+}
+
+let f=(c*9/5)+32;
+
+document.getElementById("suhuResult").innerText=
+c+"°C = "+f.toFixed(2)+"°F";
+
+}
+
+
+/* FAHRENHEIT */
+
+function fahrenheitC(){
+
+let f=parseFloat(document.getElementById("fahrenheit").value);
+
+if(isNaN(f)){
+document.getElementById("fResult").innerText="Masukkan suhu.";
+return;
+}
+
+let c=(f-32)*5/9;
+
+document.getElementById("fResult").innerText=
+f+"°F = "+c.toFixed(2)+"°C";
+
+}
+
+
+/* BUNGA */
+
+function hitungBunga(){
+
+let modal=parseFloat(document.getElementById("modal").value);
+let bunga=parseFloat(document.getElementById("bunga").value);
+let tahun=parseFloat(document.getElementById("tahun").value);
+
+if(isNaN(modal)||isNaN(bunga)||isNaN(tahun)){
+document.getElementById("bungaResult").innerText="Lengkapi data.";
+return;
+}
+
+let hasilBunga=modal*bunga*tahun/100;
+let total=modal+hasilBunga;
+
+document.getElementById("bungaResult").innerText=
+"Bunga: Rp "+hasilBunga.toLocaleString("id-ID")+
+" | Total: Rp "+total.toLocaleString("id-ID");
+
+}
+
+
+/* SELISIH TANGGAL */
+
+function selisihTanggal(){
+
+let a=document.getElementById("tanggal1").value;
+let b=document.getElementById("tanggal2").value;
+
+if(!a||!b){
+document.getElementById("tanggalResult").innerText="Pilih kedua tanggal.";
+return;
+}
+
+let d1=new Date(a);
+let d2=new Date(b);
+
+let selisih=Math.abs(d2-d1);
+
+let hari=Math.ceil(selisih/(1000*60*60*24));
+
+document.getElementById("tanggalResult").innerText=
+"Selisih: "+hari+" hari";
+
+}
+
+
+/* RANDOM */
+
+function angkaAcak(){
+
+let min=parseInt(document.getElementById("minRandom").value);
+let max=parseInt(document.getElementById("maxRandom").value);
+
+if(isNaN(min)||isNaN(max)||min>max){
+document.getElementById("randomResult").innerText="Masukkan batas yang benar.";
+return;
+}
+
+let hasil=Math.floor(Math.random()*(max-min+1))+min;
+
+document.getElementById("randomResult").innerText=
+"Angka acak: "+hasil;
+
+}
+
+
+/* SEARCH */
+
+function cariTools(){
+
+let query=document.getElementById("search").value.toLowerCase();
+
+let tools=document.querySelectorAll(".tool");
+
+tools.forEach(function(tool){
+
+let text=tool.innerText.toLowerCase();
+
+if(text.includes(query)){
+tool.style.display="";
+}else{
+tool.style.display="none";
+}
+
+});
+
+}
+
+
+/* STOPWATCH */
+
+let stopwatchInterval=null;
+let stopwatchSeconds=0;
+
+function tampilStopwatch(){
+
+let jam=Math.floor(stopwatchSeconds/3600);
+
+let menit=Math.floor((stopwatchSeconds%3600)/60);
+
+let detik=stopwatchSeconds%60;
+
+jam=String(jam).padStart(2,"0");
+menit=String(menit).padStart(2,"0");
+detik=String(detik).padStart(2,"0");
+
+document.getElementById("stopwatch").innerText=
+jam+":"+menit+":"+detik;
+
+}
+
+function mulaiStopwatch(){
+
+if(stopwatchInterval!==null)return;
+
+stopwatchInterval=setInterval(function(){
+
+stopwatchSeconds++;
+
+tampilStopwatch();
+
+},1000);
+
+}
+
+function pauseStopwatch(){
+
+clearInterval(stopwatchInterval);
+
+stopwatchInterval=null;
+
+}
+
+function resetStopwatch(){
+
+clearInterval(stopwatchInterval);
+
+stopwatchInterval=null;
+
+stopwatchSeconds=0;
+
+tampilStopwatch();
+
+}
+
+</script>
 
 </body>
 </html>
