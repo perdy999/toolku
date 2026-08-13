@@ -5,186 +5,265 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ToolKu - Tools Gratis Online</title>
-<meta name="description" content="Kumpulan tools gratis online seperti kalkulator, hitung umur, persentase dan konversi satuan.">
+
+<meta name="description" content="ToolKu menyediakan berbagai tools online gratis seperti kalkulator, hitung umur, diskon, BMI, konversi satuan, PPN dan berbagai alat praktis lainnya.">
+
+<meta name="keywords" content="tools online, kalkulator online, hitung umur, kalkulator diskon, kalkulator BMI, konversi satuan, tools gratis">
+
+<meta name="robots" content="index, follow">
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    color: #1f2937;
-    line-height: 1.6;
+html{
+scroll-behavior:smooth;
 }
 
-header {
-    background: #2563eb;
-    color: white;
-    padding: 18px 15px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fb;
+color:#1f2937;
+line-height:1.6;
 }
 
-.header-inner {
-    max-width: 1000px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header{
+background:#2563eb;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,.12);
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: bold;
+.header{
+max-width:1100px;
+margin:auto;
+padding:15px 18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-    font-size: 14px;
+.logo{
+font-size:24px;
+font-weight:bold;
 }
 
-.hero {
-    background: white;
-    text-align: center;
-    padding: 45px 20px;
+nav{
+display:flex;
+gap:18px;
 }
 
-.hero h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
+nav a{
+color:white;
+text-decoration:none;
+font-size:14px;
 }
 
-.hero p {
-    color: #6b7280;
-    margin-bottom: 20px;
+nav a:hover{
+text-decoration:underline;
 }
 
-.search {
-    width: 100%;
-    max-width: 500px;
-    padding: 14px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 16px;
+.hero{
+background:white;
+text-align:center;
+padding:55px 18px;
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 25px 15px;
+.hero h1{
+font-size:36px;
+margin-bottom:12px;
 }
 
-.ad-box {
-    background: #fff;
-    border: 1px dashed #bbb;
-    min-height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-    margin: 20px 0;
-    border-radius: 10px;
+.hero p{
+color:#6b7280;
+max-width:650px;
+margin:auto;
+font-size:17px;
 }
 
-.tools {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 15px;
+.search{
+margin-top:25px;
+width:100%;
+max-width:600px;
+padding:15px 18px;
+border:1px solid #d1d5db;
+border-radius:12px;
+font-size:16px;
+outline:none;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 3px 12px rgba(0,0,0,.06);
+.search:focus{
+border-color:#2563eb;
 }
 
-.card h3 {
-    margin-bottom: 8px;
+.container{
+max-width:1100px;
+margin:auto;
+padding:25px 16px;
 }
 
-.card p {
-    color: #6b7280;
-    font-size: 14px;
-    margin-bottom: 15px;
+.ad{
+background:white;
+border:1px dashed #c7c7c7;
+min-height:100px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#9ca3af;
+border-radius:12px;
+margin:20px 0;
 }
 
-button {
-    border: none;
-    background: #2563eb;
-    color: white;
-    padding: 11px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
+.section-title{
+font-size:27px;
+margin:30px 0 18px;
 }
 
-button:hover {
-    background: #1d4ed8;
+.tools{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:18px;
 }
 
-input {
-    width: 100%;
-    padding: 11px;
-    margin: 7px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.card{
+background:white;
+border-radius:16px;
+padding:20px;
+box-shadow:0 4px 18px rgba(0,0,0,.06);
 }
 
-.tool-section {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    margin-top: 20px;
+.card h3{
+font-size:19px;
+margin-bottom:7px;
 }
 
-.result {
-    margin-top: 12px;
-    padding: 12px;
-    background: #eef4ff;
-    border-radius: 8px;
-    font-weight: bold;
+.card p{
+font-size:14px;
+color:#6b7280;
+margin-bottom:15px;
 }
 
-section {
-    scroll-margin-top: 80px;
+input,
+select{
+width:100%;
+padding:12px;
+border:1px solid #d1d5db;
+border-radius:9px;
+font-size:15px;
+margin:5px 0;
+background:white;
 }
 
-footer {
-    background: #111827;
-    color: white;
-    text-align: center;
-    padding: 30px 15px;
-    margin-top: 40px;
+button{
+border:0;
+background:#2563eb;
+color:white;
+padding:11px 16px;
+border-radius:9px;
+font-size:14px;
+cursor:pointer;
+margin-top:6px;
 }
 
-footer a {
-    color: #93c5fd;
-    text-decoration: none;
+button:hover{
+background:#1d4ed8;
 }
 
-@media(max-width:600px) {
-
-    .header-inner {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav a {
-        margin: 0 6px;
-    }
-
-    .hero h1 {
-        font-size: 26px;
-    }
+.result{
+background:#eff6ff;
+padding:12px;
+border-radius:9px;
+margin-top:10px;
+font-weight:bold;
+min-height:20px;
 }
+
+.info{
+background:white;
+padding:25px;
+border-radius:15px;
+margin-top:25px;
+box-shadow:0 4px 18px rgba(0,0,0,.05);
+}
+
+.info h2{
+margin-bottom:15px;
+}
+
+.info p{
+margin-bottom:13px;
+color:#4b5563;
+}
+
+.hidden{
+display:none;
+}
+
+footer{
+background:#111827;
+color:white;
+margin-top:45px;
+padding:35px 18px;
+text-align:center;
+}
+
+footer a{
+color:#93c5fd;
+text-decoration:none;
+margin:0 7px;
+}
+
+footer p{
+margin:8px;
+font-size:14px;
+}
+
+.stopwatch{
+font-size:30px;
+font-weight:bold;
+text-align:center;
+padding:10px;
+}
+
+.small-note{
+font-size:12px;
+color:#6b7280;
+margin-top:7px;
+}
+
+@media(max-width:700px){
+
+.header{
+flex-direction:column;
+gap:12px;
+}
+
+nav{
+gap:12px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:29px;
+}
+
+.hero{
+padding:40px 15px;
+}
+
+.tools{
+grid-template-columns:1fr;
+}
+
+}
+
 </style>
 </head>
 
@@ -192,7 +271,7 @@ footer a {
 
 <header>
 
-<div class="header-inner">
+<div class="header">
 
 <div class="logo">
 ToolKu
@@ -202,6 +281,7 @@ ToolKu
 <a href="#home">Home</a>
 <a href="#tools">Tools</a>
 <a href="#tentang">Tentang</a>
+<a href="#privacy">Privasi</a>
 <a href="#kontak">Kontak</a>
 </nav>
 
@@ -210,20 +290,22 @@ ToolKu
 </header>
 
 
+<!-- HOME -->
+
 <section class="hero" id="home">
 
 <h1>Tools Gratis Online</h1>
 
 <p>
-Gunakan berbagai alat sederhana secara gratis langsung dari HP.
+Berbagai tools praktis yang bisa digunakan gratis langsung dari HP maupun komputer.
 </p>
 
 <input
-type="text"
-id="search"
 class="search"
-placeholder="Cari tools..."
-onkeyup="searchTools()">
+id="search"
+type="text"
+placeholder="🔍 Cari tools..."
+onkeyup="cariTools()">
 
 </section>
 
@@ -233,168 +315,386 @@ onkeyup="searchTools()">
 
 <!-- IKLAN -->
 
-<div class="ad-box">
-Tempat Iklan
+<div class="ad">
+Ruang Iklan
 </div>
 
 
-<section id="tools">
+<!-- TOOLS -->
 
-<h2 style="margin-bottom:15px;">
+<h2 class="section-title" id="tools">
 Tools Gratis
 </h2>
 
 <div class="tools" id="toolList">
 
 
-<!-- KALKULATOR -->
+<!-- 1 KALKULATOR -->
 
 <div class="card tool">
 
 <h3>🧮 Kalkulator</h3>
 
-<p>
-Kalkulator sederhana untuk menghitung angka.
-</p>
+<p>Hitung penjumlahan, pengurangan, perkalian dan pembagian.</p>
 
-<input
-type="number"
-id="angka1"
-placeholder="Angka pertama">
+<input id="calcA" type="number" placeholder="Angka pertama">
 
-<input
-type="number"
-id="angka2"
-placeholder="Angka kedua">
+<select id="operator">
+<option value="+">Penjumlahan (+)</option>
+<option value="-">Pengurangan (-)</option>
+<option value="*">Perkalian (×)</option>
+<option value="/">Pembagian (÷)</option>
+</select>
 
-<button onclick="hitung()">
-Hitung
-</button>
+<input id="calcB" type="number" placeholder="Angka kedua">
 
-<div id="hasilKalkulator"
-class="result">
-Hasil akan muncul di sini
-</div>
+<button onclick="kalkulator()">Hitung</button>
+
+<div class="result" id="calcResult"></div>
 
 </div>
 
 
-<!-- PERSENTASE -->
+<!-- 2 PERSENTASE -->
 
 <div class="card tool">
 
-<h3>📊 Persentase</h3>
+<h3>📊 Kalkulator Persentase</h3>
 
-<p>
-Hitung persentase dari sebuah angka.
-</p>
+<p>Hitung persentase dari suatu angka.</p>
 
-<input
-type="number"
-id="nilai"
-placeholder="Nilai">
+<input id="nilaiPersen" type="number" placeholder="Nilai">
 
-<input
-type="number"
-id="persen"
-placeholder="Persentase (%)">
+<input id="angkaPersen" type="number" placeholder="Persentase (%)">
 
-<button onclick="hitungPersen()">
-Hitung
-</button>
+<button onclick="persentase()">Hitung</button>
 
-<div id="hasilPersen"
-class="result">
-Hasil akan muncul di sini
-</div>
+<div class="result" id="persenResult"></div>
 
 </div>
 
 
-<!-- KONVERSI -->
+<!-- 3 DISKON -->
 
 <div class="card tool">
 
-<h3>📏 Meter → Kilometer</h3>
+<h3>🏷️ Kalkulator Diskon</h3>
 
-<p>
-Konversi meter menjadi kilometer.
-</p>
+<p>Hitung harga setelah mendapatkan diskon.</p>
 
-<input
-type="number"
-id="meter"
-placeholder="Masukkan meter">
+<input id="harga" type="number" placeholder="Harga awal">
 
-<button onclick="konversi()">
-Konversi
-</button>
+<input id="diskon" type="number" placeholder="Diskon (%)">
 
-<div id="hasilKonversi"
-class="result">
-Hasil akan muncul di sini
-</div>
+<button onclick="hitungDiskon()">Hitung</button>
+
+<div class="result" id="diskonResult"></div>
 
 </div>
 
 
-<!-- UMUR -->
+<!-- 4 PPN -->
+
+<div class="card tool">
+
+<h3>🧾 Kalkulator PPN</h3>
+
+<p>Hitung nilai PPN dan total harga.</p>
+
+<input id="hargaPPN" type="number" placeholder="Harga sebelum PPN">
+
+<input id="ratePPN" type="number" value="11" placeholder="PPN (%)">
+
+<button onclick="hitungPPN()">Hitung</button>
+
+<div class="result" id="ppnResult"></div>
+
+</div>
+
+
+<!-- 5 UMUR -->
 
 <div class="card tool">
 
 <h3>🎂 Hitung Umur</h3>
 
-<p>
-Hitung umur berdasarkan tanggal lahir.
+<p>Hitung usia berdasarkan tanggal lahir.</p>
+
+<input id="lahir" type="date">
+
+<button onclick="hitungUmur()">Hitung</button>
+
+<div class="result" id="umurResult"></div>
+
+</div>
+
+
+<!-- 6 BMI -->
+
+<div class="card tool">
+
+<h3>❤️ Kalkulator BMI</h3>
+
+<p>Hitung indeks massa tubuh berdasarkan berat dan tinggi.</p>
+
+<input id="berat" type="number" placeholder="Berat (kg)">
+
+<input id="tinggi" type="number" placeholder="Tinggi (cm)">
+
+<button onclick="hitungBMI()">Hitung</button>
+
+<div class="result" id="bmiResult"></div>
+
+<p class="small-note">
+Hasil BMI hanya informasi umum dan bukan diagnosis medis.
 </p>
 
-<input
-type="date"
-id="tanggalLahir">
-
-<button onclick="hitungUmur()">
-Hitung Umur
-</button>
-
-<div id="hasilUmur"
-class="result">
-Hasil akan muncul di sini
-</div>
-
 </div>
 
 
+<!-- 7 METER KM -->
+
+<div class="card tool">
+
+<h3>📏 Meter → Kilometer</h3>
+
+<p>Konversi meter menjadi kilometer.</p>
+
+<input id="meter" type="number" placeholder="Meter">
+
+<button onclick="meterKM()">Konversi</button>
+
+<div class="result" id="meterResult"></div>
+
 </div>
 
-</section>
+
+<!-- 8 KM METER -->
+
+<div class="card tool">
+
+<h3>📐 Kilometer → Meter</h3>
+
+<p>Konversi kilometer menjadi meter.</p>
+
+<input id="km" type="number" placeholder="Kilometer">
+
+<button onclick="kmMeter()">Konversi</button>
+
+<div class="result" id="kmResult"></div>
+
+</div>
+
+
+<!-- 9 KG GRAM -->
+
+<div class="card tool">
+
+<h3>⚖️ Kg → Gram</h3>
+
+<p>Konversi kilogram menjadi gram.</p>
+
+<input id="kg" type="number" placeholder="Kilogram">
+
+<button onclick="kgGram()">Konversi</button>
+
+<div class="result" id="kgResult"></div>
+
+</div>
+
+
+<!-- 10 CELSIUS -->
+
+<div class="card tool">
+
+<h3>🌡️ Celsius → Fahrenheit</h3>
+
+<p>Konversi suhu Celsius menjadi Fahrenheit.</p>
+
+<input id="celcius" type="number" placeholder="Celsius">
+
+<button onclick="celsiusF()">Konversi</button>
+
+<div class="result" id="suhuResult"></div>
+
+</div>
+
+
+<!-- 11 FAHRENHEIT -->
+
+<div class="card tool">
+
+<h3>🌡️ Fahrenheit → Celsius</h3>
+
+<p>Konversi Fahrenheit menjadi Celsius.</p>
+
+<input id="fahrenheit" type="number" placeholder="Fahrenheit">
+
+<button onclick="fahrenheitC()">Konversi</button>
+
+<div class="result" id="fResult"></div>
+
+</div>
+
+
+<!-- 12 BUNGA -->
+
+<div class="card tool">
+
+<h3>💰 Bunga Sederhana</h3>
+
+<p>Hitung bunga sederhana berdasarkan modal dan waktu.</p>
+
+<input id="modal" type="number" placeholder="Modal">
+
+<input id="bunga" type="number" placeholder="Bunga per tahun (%)">
+
+<input id="tahun" type="number" placeholder="Jumlah tahun">
+
+<button onclick="hitungBunga()">Hitung</button>
+
+<div class="result" id="bungaResult"></div>
+
+</div>
+
+
+<!-- 13 SELISIH TANGGAL -->
+
+<div class="card tool">
+
+<h3>📅 Selisih Tanggal</h3>
+
+<p>Hitung jumlah hari antara dua tanggal.</p>
+
+<input id="tanggal1" type="date">
+
+<input id="tanggal2" type="date">
+
+<button onclick="selisihTanggal()">Hitung</button>
+
+<div class="result" id="tanggalResult"></div>
+
+</div>
+
+
+<!-- 14 ANGKA ACAK -->
+
+<div class="card tool">
+
+<h3>🎲 Angka Acak</h3>
+
+<p>Generate angka acak berdasarkan batas minimum dan maksimum.</p>
+
+<input id="minRandom" type="number" placeholder="Minimum">
+
+<input id="maxRandom" type="number" placeholder="Maksimum">
+
+<button onclick="angkaAcak()">Generate</button>
+
+<div class="result" id="randomResult"></div>
+
+</div>
+
+
+<!-- 15 STOPWATCH -->
+
+<div class="card tool">
+
+<h3>⏱️ Stopwatch</h3>
+
+<p>Gunakan stopwatch sederhana.</p>
+
+<div class="stopwatch" id="stopwatch">
+00:00:00
+</div>
+
+<button onclick="mulaiStopwatch()">Mulai</button>
+<button onclick="pauseStopwatch()">Pause</button>
+<button onclick="resetStopwatch()">Reset</button>
+
+</div>
+
+
+</div>
 
 
 <!-- IKLAN -->
 
-<div class="ad-box">
-Tempat Iklan
+<div class="ad">
+Ruang Iklan
 </div>
 
 
 <!-- TENTANG -->
 
-<section id="tentang" class="tool-section">
+<section class="info" id="tentang">
 
-<h2>Tentang ToolKu</h2>
-
-<br>
+<h2>ℹ️ Tentang ToolKu</h2>
 
 <p>
-ToolKu adalah website yang menyediakan berbagai
-tools online sederhana yang dapat digunakan secara gratis.
+ToolKu adalah website yang menyediakan berbagai tools online sederhana dan praktis yang dapat digunakan secara gratis.
 </p>
 
-<br>
+<p>
+Kami membuat ToolKu untuk membantu pengguna melakukan perhitungan, konversi dan berbagai pekerjaan sederhana langsung melalui browser.
+</p>
 
 <p>
-Website ini dibuat agar pengguna dapat melakukan
-perhitungan dan konversi dengan mudah melalui
-perangkat HP maupun komputer.
+Website ini dapat digunakan melalui smartphone, tablet maupun komputer tanpa perlu memasang aplikasi tambahan.
+</p>
+
+</section>
+
+
+<!-- PRIVACY -->
+
+<section class="info" id="privacy">
+
+<h2>🔐 Kebijakan Privasi</h2>
+
+<p>
+ToolKu menghargai privasi pengunjung website.
+</p>
+
+<p>
+Sebagian besar tools di website ini memproses data langsung di perangkat pengguna melalui browser. Kami tidak memerlukan pengguna untuk membuat akun untuk menggunakan tools dasar.
+</p>
+
+<p>
+ToolKu dapat menggunakan layanan pihak ketiga seperti Google AdSense untuk menampilkan iklan. Layanan tersebut dapat menggunakan teknologi seperti cookie sesuai dengan kebijakan dan ketentuan mereka.
+</p>
+
+<p>
+Pengguna dapat mengatur atau menonaktifkan cookie melalui pengaturan browser masing-masing.
+</p>
+
+<p>
+Dengan menggunakan website ini, pengguna menyetujui kebijakan privasi yang berlaku.
+</p>
+
+</section>
+
+
+<!-- TERMS -->
+
+<section class="info" id="terms">
+
+<h2>📜 Syarat dan Ketentuan</h2>
+
+<p>
+ToolKu menyediakan tools untuk tujuan informasi dan penggunaan umum.
+</p>
+
+<p>
+Kami berusaha menjaga hasil perhitungan tetap akurat, tetapi kami tidak menjamin bahwa semua hasil selalu bebas dari kesalahan.
+</p>
+
+<p>
+Pengguna bertanggung jawab atas keputusan yang dibuat berdasarkan hasil dari tools di website ini.
+</p>
+
+<p>
+ToolKu dapat melakukan perubahan, penambahan atau penghapusan fitur sewaktu-waktu.
 </p>
 
 </section>
@@ -402,21 +702,21 @@ perangkat HP maupun komputer.
 
 <!-- KONTAK -->
 
-<section id="kontak" class="tool-section">
+<section class="info" id="kontak">
 
-<h2>Kontak</h2>
-
-<br>
+<h2>📧 Kontak</h2>
 
 <p>
-Jika memiliki pertanyaan atau menemukan kesalahan
-pada website, silakan hubungi kami.
+Jika Anda menemukan kesalahan, memiliki pertanyaan atau ingin memberikan saran mengenai website ToolKu, silakan hubungi kami.
 </p>
 
-<br>
+<p>
+Email:
+<strong>admin@toolku.com</strong>
+</p>
 
 <p>
-Email: admin@toolku.com
+Catatan: ganti alamat email di atas dengan email kamu sendiri sebelum website dipublikasikan secara serius.
 </p>
 
 </section>
@@ -428,15 +728,16 @@ Email: admin@toolku.com
 <footer>
 
 <p>
-© 2026 ToolKu
+© 2026 ToolKu - Tools Gratis Online
 </p>
 
-<br>
-
 <p>
-<a href="#">Kebijakan Privasi</a>
-&nbsp; | &nbsp;
-<a href="#">Syarat & Ketentuan</a>
+<a href="#home">Home</a>
+<a href="#tools">Tools</a>
+<a href="#tentang">Tentang</a>
+<a href="#privacy">Privasi</a>
+<a href="#terms">Syarat</a>
+<a href="#kontak">Kontak</a>
 </p>
 
 </footer>
@@ -446,155 +747,392 @@ Email: admin@toolku.com
 
 /* KALKULATOR */
 
-function hitung() {
+function kalkulator(){
 
-let a = parseFloat(
-document.getElementById("angka1").value
-);
+let a=parseFloat(document.getElementById("calcA").value);
+let b=parseFloat(document.getElementById("calcB").value);
+let op=document.getElementById("operator").value;
 
-let b = parseFloat(
-document.getElementById("angka2").value
-);
-
-if (isNaN(a) || isNaN(b)) {
-
-document.getElementById("hasilKalkulator").innerText =
-"Masukkan kedua angka.";
-
+if(isNaN(a)||isNaN(b)){
+document.getElementById("calcResult").innerText="Masukkan kedua angka.";
 return;
-
 }
 
-let hasil = a + b;
+let hasil;
 
-document.getElementById("hasilKalkulator").innerText =
-"Hasil penjumlahan: " + hasil;
+if(op==="+") hasil=a+b;
+if(op==="-") hasil=a-b;
+if(op==="*") hasil=a*b;
+
+if(op==="/"){
+if(b===0){
+document.getElementById("calcResult").innerText="Tidak bisa dibagi dengan nol.";
+return;
+}
+hasil=a/b;
+}
+
+document.getElementById("calcResult").innerText="Hasil: "+hasil;
 
 }
 
 
 /* PERSENTASE */
 
-function hitungPersen() {
+function persentase(){
 
-let nilai =
-parseFloat(document.getElementById("nilai").value);
+let nilai=parseFloat(document.getElementById("nilaiPersen").value);
+let persen=parseFloat(document.getElementById("angkaPersen").value);
 
-let persen =
-parseFloat(document.getElementById("persen").value);
-
-if (isNaN(nilai) || isNaN(persen)) {
-
-document.getElementById("hasilPersen").innerText =
-"Masukkan nilai dan persentase.";
-
+if(isNaN(nilai)||isNaN(persen)){
+document.getElementById("persenResult").innerText="Masukkan nilai.";
 return;
+}
+
+let hasil=nilai*persen/100;
+
+document.getElementById("persenResult").innerText=
+persen+"% dari "+nilai+" = "+hasil;
 
 }
 
-let hasil = nilai * persen / 100;
 
-document.getElementById("hasilPersen").innerText =
-persen + "% dari " + nilai + " = " + hasil;
+/* DISKON */
 
-}
+function hitungDiskon(){
 
+let harga=parseFloat(document.getElementById("harga").value);
+let diskon=parseFloat(document.getElementById("diskon").value);
 
-/* KONVERSI */
-
-function konversi() {
-
-let meter =
-parseFloat(document.getElementById("meter").value);
-
-if (isNaN(meter)) {
-
-document.getElementById("hasilKonversi").innerText =
-"Masukkan jumlah meter.";
-
+if(isNaN(harga)||isNaN(diskon)){
+document.getElementById("diskonResult").innerText="Masukkan harga dan diskon.";
 return;
+}
+
+let potongan=harga*diskon/100;
+let akhir=harga-potongan;
+
+document.getElementById("diskonResult").innerText=
+"Potongan: Rp "+potongan.toLocaleString("id-ID")+
+" | Harga akhir: Rp "+akhir.toLocaleString("id-ID");
 
 }
 
-let km = meter / 1000;
 
-document.getElementById("hasilKonversi").innerText =
-meter + " meter = " + km + " kilometer";
+/* PPN */
 
-}
+function hitungPPN(){
 
+let harga=parseFloat(document.getElementById("hargaPPN").value);
+let rate=parseFloat(document.getElementById("ratePPN").value);
 
-/* HITUNG UMUR */
-
-function hitungUmur() {
-
-let tanggal =
-document.getElementById("tanggalLahir").value;
-
-if (!tanggal) {
-
-document.getElementById("hasilUmur").innerText =
-"Pilih tanggal lahir.";
-
+if(isNaN(harga)||isNaN(rate)){
+document.getElementById("ppnResult").innerText="Masukkan data.";
 return;
+}
+
+let ppn=harga*rate/100;
+let total=harga+ppn;
+
+document.getElementById("ppnResult").innerText=
+"PPN: Rp "+ppn.toLocaleString("id-ID")+
+" | Total: Rp "+total.toLocaleString("id-ID");
 
 }
 
-let lahir = new Date(tanggal);
-let sekarang = new Date();
 
-let umur =
-sekarang.getFullYear() -
-lahir.getFullYear();
+/* UMUR */
 
-let bulan =
-sekarang.getMonth() -
-lahir.getMonth();
+function hitungUmur(){
 
-if (
-bulan < 0 ||
-(bulan === 0 &&
-sekarang.getDate() < lahir.getDate())
-) {
+let input=document.getElementById("lahir").value;
 
+if(!input){
+document.getElementById("umurResult").innerText="Pilih tanggal lahir.";
+return;
+}
+
+let lahir=new Date(input);
+let sekarang=new Date();
+
+let umur=sekarang.getFullYear()-lahir.getFullYear();
+
+let bulan=sekarang.getMonth()-lahir.getMonth();
+
+if(
+bulan<0 ||
+(bulan===0 && sekarang.getDate()<lahir.getDate())
+){
 umur--;
+}
+
+document.getElementById("umurResult").innerText=
+"Umur: "+umur+" tahun";
 
 }
 
-document.getElementById("hasilUmur").innerText =
-"Umur Anda sekitar " + umur + " tahun.";
+
+/* BMI */
+
+function hitungBMI(){
+
+let berat=parseFloat(document.getElementById("berat").value);
+let tinggi=parseFloat(document.getElementById("tinggi").value);
+
+if(isNaN(berat)||isNaN(tinggi)||tinggi<=0){
+document.getElementById("bmiResult").innerText="Masukkan berat dan tinggi.";
+return;
+}
+
+let meter=tinggi/100;
+let bmi=berat/(meter*meter);
+
+let kategori="";
+
+if(bmi<18.5) kategori="di bawah kisaran umum";
+else if(bmi<25) kategori="kisaran umum";
+else if(bmi<30) kategori="di atas kisaran umum";
+else kategori="obesitas";
+
+document.getElementById("bmiResult").innerText=
+"BMI: "+bmi.toFixed(1)+" ("+kategori+")";
+
+}
+
+
+/* METER KM */
+
+function meterKM(){
+
+let meter=parseFloat(document.getElementById("meter").value);
+
+if(isNaN(meter)){
+document.getElementById("meterResult").innerText="Masukkan meter.";
+return;
+}
+
+document.getElementById("meterResult").innerText=
+meter+" meter = "+(meter/1000)+" km";
+
+}
+
+
+/* KM METER */
+
+function kmMeter(){
+
+let km=parseFloat(document.getElementById("km").value);
+
+if(isNaN(km)){
+document.getElementById("kmResult").innerText="Masukkan kilometer.";
+return;
+}
+
+document.getElementById("kmResult").innerText=
+km+" km = "+(km*1000)+" meter";
+
+}
+
+
+/* KG GRAM */
+
+function kgGram(){
+
+let kg=parseFloat(document.getElementById("kg").value);
+
+if(isNaN(kg)){
+document.getElementById("kgResult").innerText="Masukkan kilogram.";
+return;
+}
+
+document.getElementById("kgResult").innerText=
+kg+" kg = "+(kg*1000)+" gram";
+
+}
+
+
+/* CELSIUS */
+
+function celsiusF(){
+
+let c=parseFloat(document.getElementById("celcius").value);
+
+if(isNaN(c)){
+document.getElementById("suhuResult").innerText="Masukkan suhu.";
+return;
+}
+
+let f=(c*9/5)+32;
+
+document.getElementById("suhuResult").innerText=
+c+"°C = "+f.toFixed(2)+"°F";
+
+}
+
+
+/* FAHRENHEIT */
+
+function fahrenheitC(){
+
+let f=parseFloat(document.getElementById("fahrenheit").value);
+
+if(isNaN(f)){
+document.getElementById("fResult").innerText="Masukkan suhu.";
+return;
+}
+
+let c=(f-32)*5/9;
+
+document.getElementById("fResult").innerText=
+f+"°F = "+c.toFixed(2)+"°C";
+
+}
+
+
+/* BUNGA */
+
+function hitungBunga(){
+
+let modal=parseFloat(document.getElementById("modal").value);
+let bunga=parseFloat(document.getElementById("bunga").value);
+let tahun=parseFloat(document.getElementById("tahun").value);
+
+if(isNaN(modal)||isNaN(bunga)||isNaN(tahun)){
+document.getElementById("bungaResult").innerText="Lengkapi data.";
+return;
+}
+
+let hasilBunga=modal*bunga*tahun/100;
+let total=modal+hasilBunga;
+
+document.getElementById("bungaResult").innerText=
+"Bunga: Rp "+hasilBunga.toLocaleString("id-ID")+
+" | Total: Rp "+total.toLocaleString("id-ID");
+
+}
+
+
+/* SELISIH TANGGAL */
+
+function selisihTanggal(){
+
+let a=document.getElementById("tanggal1").value;
+let b=document.getElementById("tanggal2").value;
+
+if(!a||!b){
+document.getElementById("tanggalResult").innerText="Pilih kedua tanggal.";
+return;
+}
+
+let d1=new Date(a);
+let d2=new Date(b);
+
+let selisih=Math.abs(d2-d1);
+
+let hari=Math.ceil(selisih/(1000*60*60*24));
+
+document.getElementById("tanggalResult").innerText=
+"Selisih: "+hari+" hari";
+
+}
+
+
+/* RANDOM */
+
+function angkaAcak(){
+
+let min=parseInt(document.getElementById("minRandom").value);
+let max=parseInt(document.getElementById("maxRandom").value);
+
+if(isNaN(min)||isNaN(max)||min>max){
+document.getElementById("randomResult").innerText="Masukkan batas yang benar.";
+return;
+}
+
+let hasil=Math.floor(Math.random()*(max-min+1))+min;
+
+document.getElementById("randomResult").innerText=
+"Angka acak: "+hasil;
 
 }
 
 
 /* SEARCH */
 
-function searchTools() {
+function cariTools(){
 
-let input =
-document.getElementById("search")
-.value
-.toLowerCase();
+let query=document.getElementById("search").value.toLowerCase();
 
-let tools =
-document.querySelectorAll(".tool");
+let tools=document.querySelectorAll(".tool");
 
-tools.forEach(function(tool) {
+tools.forEach(function(tool){
 
-let text =
-tool.innerText.toLowerCase();
+let text=tool.innerText.toLowerCase();
 
-if (text.includes(input)) {
-
-tool.style.display = "";
-
-} else {
-
-tool.style.display = "none";
-
+if(text.includes(query)){
+tool.style.display="";
+}else{
+tool.style.display="none";
 }
 
 });
+
+}
+
+
+/* STOPWATCH */
+
+let stopwatchInterval=null;
+let stopwatchSeconds=0;
+
+function tampilStopwatch(){
+
+let jam=Math.floor(stopwatchSeconds/3600);
+
+let menit=Math.floor((stopwatchSeconds%3600)/60);
+
+let detik=stopwatchSeconds%60;
+
+jam=String(jam).padStart(2,"0");
+menit=String(menit).padStart(2,"0");
+detik=String(detik).padStart(2,"0");
+
+document.getElementById("stopwatch").innerText=
+jam+":"+menit+":"+detik;
+
+}
+
+function mulaiStopwatch(){
+
+if(stopwatchInterval!==null)return;
+
+stopwatchInterval=setInterval(function(){
+
+stopwatchSeconds++;
+
+tampilStopwatch();
+
+},1000);
+
+}
+
+function pauseStopwatch(){
+
+clearInterval(stopwatchInterval);
+
+stopwatchInterval=null;
+
+}
+
+function resetStopwatch(){
+
+clearInterval(stopwatchInterval);
+
+stopwatchInterval=null;
+
+stopwatchSeconds=0;
+
+tampilStopwatch();
 
 }
 
