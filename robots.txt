@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://perdy999.github.io/toolku/sitemap.xml
